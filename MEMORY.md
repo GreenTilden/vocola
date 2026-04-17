@@ -9,7 +9,7 @@
 
 ## Project Identity
 - **Name**: Vocola — Song-Lyric Parody AI
-- **Repo**: ~/projects/vocola (GitHub: not yet pushed)
+- **Repo**: ~/projects/vocola (GitHub: https://github.com/GreenTilden/vocola, pushed 2026-04-17 DMEXT-02 polish phase, public)
 - **Stack**: FastAPI + Vue 3/Vite; Ollama for lyric rewriting; ElevenLabs + Chatterbox for vocal synth; Demucs + librosa for stem separation; SDXL + pixel-art-xl LoRA for mascot
 - **Ports**: TBD (implementation sprint assigns)
 - **Deploy Target**: Docker Compose dev initially; prod decision deferred
