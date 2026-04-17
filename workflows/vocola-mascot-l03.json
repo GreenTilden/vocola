@@ -1,0 +1,109 @@
+{
+  "_meta": {
+    "name": "vocola-mascot-l03",
+    "version": "1.0.0",
+    "authored": "2026-04-17",
+    "authored_by": "Louie DMEXT-02 L03 [actor:autonomous_agent_with_hitl]",
+    "source": "Slot-swap from sprite-forge/workflows/barry-comfyui-canonical.json v2.1.0. Identity slots (subject, hair, accessory_eyes, accessory_ears_or_prop, wardrobe, expression, aesthetic) rewritten for Vocola songsmith character. Template slots (style anchor, composition anchor, framing, proportions) preserved unchanged per primitive doc sprite-forge/docs/primitives/character-generation.md v1.0. Generation parameters locked (SDXL + pixel-art-xl LoRA 0.85 + euler_ancestral + karras + 25 steps + cfg 7.5 + 1024x1024).",
+    "purpose": "First mascot candidate generation for Vocola (song-lyric parody AI). Proves character-generation primitive ports cleanly outside sprite-forge (cross-repo adaptation evidence for DMEXT-02 Extensions page).",
+    "consumes_primitive": "sprite-forge/docs/primitives/character-generation.md v1.0",
+    "parameters": {
+      "checkpoint": "sd_xl_base_1.0.safetensors",
+      "lora_name": "pixel-art-xl.safetensors",
+      "lora_strength": 0.85,
+      "resolution": 1024,
+      "sampler": "euler_ancestral",
+      "scheduler": "karras",
+      "steps": 25,
+      "cfg": 7.5,
+      "batch_size": 1,
+      "positive_prompt": "pixel art mascot character, clean silhouette on white background, full body standing pose, small chibi body with large round head, young cheerful songsmith with retro microphone, playful family-music parody performer, curly tousled bright hair, big excited eyes, holding retro microphone with swirl cord and small music-note stickers, colorful graphic t-shirt with treble-clef print, rainbow suspenders, bright patterned pants, open mouth mid-song big grin, cartoon family-karaoke musical performer vibe, sega genesis era sprite style",
+      "negative_prompt": "blurry, low quality, jpeg artifacts, watermark, text, signature, realistic, photograph, 3d render, smooth shading, anti-aliased, cluttered background, shop shelves, record store interior, busy background",
+      "seed_strategy": "fire at known-good seeds 1001 + 1002 + 1004 per primitive v1.0 recommendation; avoid seed 1003 (known sprite-sheet trigger globally)"
+    },
+    "identity_slots": {
+      "subject": "young cheerful songsmith with retro microphone, playful family-music parody performer",
+      "hair": "curly tousled bright hair",
+      "accessory_eyes": "big excited eyes",
+      "accessory_ears_or_prop": "holding retro microphone with swirl cord and small music-note stickers",
+      "wardrobe": "colorful graphic t-shirt with treble-clef print, rainbow suspenders, bright patterned pants",
+      "expression": "open mouth mid-song big grin",
+      "aesthetic": "cartoon family-karaoke musical performer vibe"
+    }
+  },
+  "1": {
+    "class_type": "CheckpointLoaderSimple",
+    "inputs": {
+      "ckpt_name": "sd_xl_base_1.0.safetensors"
+    },
+    "_meta": { "title": "Load SDXL base checkpoint" }
+  },
+  "2": {
+    "class_type": "LoraLoader",
+    "inputs": {
+      "lora_name": "pixel-art-xl.safetensors",
+      "strength_model": 0.85,
+      "strength_clip": 0.85,
+      "model": ["1", 0],
+      "clip": ["1", 1]
+    },
+    "_meta": { "title": "Apply pixel-art-xl LoRA" }
+  },
+  "3": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "pixel art mascot character, clean silhouette on white background, full body standing pose, small chibi body with large round head, young cheerful songsmith with retro microphone, playful family-music parody performer, curly tousled bright hair, big excited eyes, holding retro microphone with swirl cord and small music-note stickers, colorful graphic t-shirt with treble-clef print, rainbow suspenders, bright patterned pants, open mouth mid-song big grin, cartoon family-karaoke musical performer vibe, sega genesis era sprite style",
+      "clip": ["2", 1]
+    },
+    "_meta": { "title": "Positive prompt (Vocola songsmith mascot DMEXT-02 L03)" }
+  },
+  "4": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "blurry, low quality, jpeg artifacts, watermark, text, signature, realistic, photograph, 3d render, smooth shading, anti-aliased, cluttered background, shop shelves, record store interior, busy background",
+      "clip": ["2", 1]
+    },
+    "_meta": { "title": "Negative prompt (primitive default)" }
+  },
+  "5": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "_meta": { "title": "1024x1024 empty latent" }
+  },
+  "6": {
+    "class_type": "KSampler",
+    "inputs": {
+      "seed": 0,
+      "steps": 25,
+      "cfg": 7.5,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "karras",
+      "denoise": 1.0,
+      "model": ["2", 0],
+      "positive": ["3", 0],
+      "negative": ["4", 0],
+      "latent_image": ["5", 0]
+    },
+    "_meta": { "title": "KSampler — seed=0 is placeholder; caller overwrites" }
+  },
+  "7": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": ["6", 0],
+      "vae": ["1", 2]
+    },
+    "_meta": { "title": "VAE decode" }
+  },
+  "8": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "vocola_mascot_l03",
+      "images": ["7", 0]
+    },
+    "_meta": { "title": "Save output (prefix overridden per-seed by caller)" }
+  }
+}

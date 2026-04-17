@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+dist/
+.env
+.env.local
+assets/mascot-candidates/tmp/
+assets/output/
+*.mp3
+*.wav
+# Keep generated mascot candidates + the canonical pick
+!assets/mascot-candidates/*.png
