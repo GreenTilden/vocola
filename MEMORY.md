@@ -14,7 +14,7 @@
 - **Ports**: TBD (implementation sprint assigns)
 - **Deploy Target**: Docker Compose dev initially; prod decision deferred
 - **Parent Entity**: DARNTECH LLC (NOT "Arney Technology Services LLC" — that's archived pre-filing naming)
-- **Casey-Jr Deployment**: pending registration at DMEXT-02 L03 close
+- **Casey-Jr Deployment**: `xxxxxxxx` (phase 1 pre_sales, professional pillar, 7 needs: 4 critical + 2 important + 1 nice_to_have, lab-automation domain template). session_start activity `1421710d` logged 2026-04-17 L03.
 
 ## Architecture & Patterns
 - **Consumes `BaseTTSClient` primitive** (articles-digest `pipeline/tts/tts_base.py`): supports Chatterbox + ElevenLabs swap via same abstract contract (health_check + synthesize_article + synthesize_short)
