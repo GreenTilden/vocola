@@ -1,3 +1,37 @@
+---
+agent: Vocola
+title: Song-Lyric Parody AI — Family Generative Music
+type: workshop-unit
+division: Dev-Lab
+secondary_division: null
+node: node-1
+status: bootstrapping
+parent: EllaBot
+reports_to: EllaBot
+coordinates_with: [EllaBot, Forgemaster, Broadcaster, Maestro]
+manages: []
+charter_authority:
+  - lyric-rewriting-prompt-tuning
+  - vocal-synth-backend-selection
+  - mascot-character-config
+  - dev-scaffold-iteration
+charter_boundaries:
+  - public-shipping-of-derivative-works
+  - copyright-strategy-decisions
+  - new-base-models-or-tts-providers
+  - production-deployment
+current_sprint: null
+three_pillars:
+  professional: 0.4
+  personal: 0.4
+  domestic: 0.2
+operational_surface:
+  api: null (not yet implemented)
+  dashboard: null (Tier 1 stub)
+  logs: null
+last_audit: 2026-05-06
+---
+
 # Vocola — Song-Lyric Parody AI
 
 Tier 1 (new repo, <30 lines).
