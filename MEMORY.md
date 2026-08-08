@@ -16,7 +16,7 @@
 - **Parent Entity**: DARNTECH LLC (NOT "Arney Technology Services LLC" — that's archived pre-filing naming)
 - **Casey-Jr Deployment**: `xxxxxxxx` — professional pillar, lab-automation domain template (both
   API-immutable, so they are identity). Status/phase/need-counts are volatile:
-  `curl -s 192.168.0.98:8902/api/deployments/xxxxxxxx` (+ `/needs`) — the "phase 1 pre_sales"
+  `curl -s "$CASEY_BASE"/api/deployments/xxxxxxxx` (+ `/needs`) — the "phase 1 pre_sales"
   transcribed here read `parked` live (corrected cycle-65 L10). session_start activity `1421710d`
   logged 2026-04-17 L03.
 
@@ -28,8 +28,8 @@
 ## Dependencies
 - → depends-on: articles-digest (BaseTTSClient primitive)
 - → depends-on: sprite-forge (character-generation primitive)
-- → depends-on: ComfyUI on Node 1 (192.168.0.99:8188) for mascot generation
-- → depends-on: Ollama on Node 1 for lyric rewriting
+- → depends-on: ComfyUI on the GPU host (LAN, port 8188) for mascot generation
+- → depends-on: Ollama on the GPU host for lyric rewriting
 
 ## Archived Predecessor
 - `~/projects/_archive/vocola-voice-marketplace-2026-02/` — paused MVP from 2026-02 for a consent-first voice reference marketplace. Different mission, different codebase. Did NOT share the current song-lyric-parody scope. Not loaded here — if the voice-marketplace concept ever revives, give it a new name.

@@ -54,6 +54,6 @@ Size range 415-737 KB is below SFGEN-02's 937-1029 KB Barry range — unclear wh
 
 - **Primitive**: sprite-forge character-generation v1.0 (Huey SFGEN-02 L13)
 - **Workflow lineage**: barry-comfyui-canonical v2.1.0 → vocola-mascot-l03 v1.0.0 (identity slot swap only; all template slots + generation params inherited unchanged)
-- **Generation host**: Node 1 ComfyUI (192.168.0.99:8188, RTX 5070 Ti)
+- **Generation host**: ComfyUI on the GPU host (LAN, port 8188, RTX 5070 Ti)
 - **ComfyUI version**: 0.14.1 · PyTorch 2.10.0+cu128
 - **Cross-family Extensions evidence**: first primitive port outside sprite-forge — feeds catalog.json `cross_repo_adaptations[]` for family_id=`prompt-engineering` at DMEXT-02 L06
