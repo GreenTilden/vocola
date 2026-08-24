@@ -58,7 +58,7 @@ Professional (GenAI R&D), Personal (creative fun), Domestic (family songs). All 
 
 - Upstream primitive doc: `~/projects/sprite-forge/docs/primitives/character-generation.md`
 - TTS primitive: `~/projects/articles-digest/pipeline/tts/tts_base.py`
-- Cross-DArnTech primitive catalog: `~/projects/darntech-foreman/primitives/catalog.json`
+- Cross-DArnTech primitive catalog: `~/projects/service-bundle-core/primitives/catalog.json`
 - Archived predecessor (different mission): `~/projects/_archive/vocola-voice-marketplace-2026-02/`
 
 ## Dev
