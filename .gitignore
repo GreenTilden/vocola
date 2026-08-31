@@ -11,3 +11,8 @@ assets/output/
 *.wav
 # Keep generated mascot candidates + the canonical pick
 !assets/mascot-candidates/*.png
+
+# Foreman cycle state + live service handles. This repo is PUBLIC; a Casey
+# deployment id is a working handle into an unauthenticated tracker, so it lives
+# here and is read at use time, never transcribed into a tracked file.
+.foreman/

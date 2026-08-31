@@ -14,11 +14,14 @@
 - **Ports**: TBD (implementation sprint assigns)
 - **Deploy Target**: Docker Compose dev initially; prod decision deferred
 - **Parent Entity**: DARNTECH LLC (NOT "Arney Technology Services LLC" — that's archived pre-filing naming)
-- **Casey-Jr Deployment**: `xxxxxxxx` — professional pillar, lab-automation domain template (both
-  API-immutable, so they are identity). Status/phase/need-counts are volatile:
-  `curl -s "$CASEY_BASE"/api/deployments/xxxxxxxx` (+ `/needs`) — the "phase 1 pre_sales"
-  transcribed here read `parked` live (corrected cycle-65 L10). session_start activity `1421710d`
-  logged 2026-04-17 L03.
+- **Casey-Jr Deployment**: id in `.foreman/casey-deployment-id` (gitignored — this repo is
+  public, and a deployment id is a working handle into an unauthenticated tracker). Pillar
+  and domain template are professional / lab-automation, both API-immutable, so they are
+  identity. Status/phase/need-counts are volatile — read them live, never transcribe them:
+  `curl -s "$CASEY_BASE"/api/deployments/$(cat .foreman/casey-deployment-id)` (+ `/needs`).
+  A "phase 1 pre_sales" once written here read `parked` live (corrected cycle-65 L10), which
+  is why this now points at the API instead of restating it. The 2026-04-17 L03 session_start
+  activity is queryable from the deployment; its id is not repeated here.
 
 ## Architecture & Patterns
 - **Consumes `BaseTTSClient` primitive** (articles-digest `pipeline/tts/tts_base.py`): supports Chatterbox + ElevenLabs swap via same abstract contract (health_check + synthesize_article + synthesize_short)
