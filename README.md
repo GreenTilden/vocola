@@ -8,7 +8,7 @@
 
 > Take any song. Rewrite the lyrics about your kids.
 
-Vocola is a family-fun generative-AI product that takes a song (or any vocal track) and rewrites its lyrics into a personalized parody — songs about [REDACTED-PRIVATE], [REDACTED-PRIVATE], the cat, whatever's making the household laugh today. Uses ElevenLabs / Chatterbox TTS for vocal synthesis over the instrumental stem.
+Vocola is a family-fun generative-AI product that takes a song (or any vocal track) and rewrites its lyrics into a personalized parody — songs about your kids, the cat, whatever is making the household laugh today. Uses ElevenLabs / Chatterbox TTS for vocal synthesis over the instrumental stem.
 
 ## Status
 
@@ -31,7 +31,7 @@ Canonical mascot: seed 1001 (operator pick candidate; HITL override at any time 
 
 - **Professional** — GenAI product, cross-project TTS + prompt-engineering primitive consumer, R&D-qualifying
 - **Personal** — creative work (making songs is fun); validates voice-cloning + lyric-rewriting patterns
-- **Domestic** — makes family songs actually happen; [REDACTED-PRIVATE] + [REDACTED-PRIVATE] love personalized music
+- **Domestic** — makes family songs actually happen; the kids love personalized music
 
 ## Parent Entity
 

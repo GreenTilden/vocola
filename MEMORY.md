@@ -39,5 +39,5 @@
 
 ## Three Pillars (explicit)
 - **Professional**: R&D (TTS primitive consumer, prompt-engineering primitive consumer, novel lyric-rewriting prompt work), shippable GenAI product surface
-- **Personal**: creative satisfaction (making songs is fun), family connection ([REDACTED-PRIVATE] + [REDACTED-PRIVATE] audience)
+- **Personal**: creative satisfaction (making songs is fun), family connection (the kids are the audience)
 - **Domestic**: makes family songs actually happen with kid names embedded

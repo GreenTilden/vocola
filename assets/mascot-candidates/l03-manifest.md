@@ -40,7 +40,7 @@ Size range 415-737 KB is below SFGEN-02's 937-1029 KB Barry range — unclear wh
 
 - **D1**: Canonical Vocola mascot selection (pick one of 3, or request reshoot)
 - **D2**: Microphone-as-prop vs mic-stand-with-body — primitive v1.0 is humanoid-bounded; mic is an accessory, not the subject. If operator wants Vocola to BE a microphone character (non-humanoid), that's a distinct primitive / SFGEN-0X follow-up.
-- **D3**: Kid-audience acceptability — does [REDACTED-PRIVATE]/[REDACTED-PRIVATE] respond to this character visually? Family HITL data is a validated ranking signal per charter v0.1.6 (HITL = ground truth).
+- **D3**: Kid-audience acceptability — does a young kid respond to this character visually? Family HITL data is a validated ranking signal per charter v0.1.6 (HITL = ground truth).
 - **D4**: Port lessons for the Extensions-page cross-family topology claim — cross-repo adaptation evidence for primitives/catalog.json family #4.
 
 ## Expected failure modes (per primitive v1.0 guardrails)
