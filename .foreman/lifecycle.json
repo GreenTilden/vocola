@@ -1,0 +1,6 @@
+{
+  "_what": "Repo lifecycle marker. run-fleet-detectors-nightly.sh reads this: retired|parked repos run only the detectors that survive retirement (proven-remote backup) and are reported in the parked bucket, never dropped. Set status back to active (or delete this file) to rejoin the full sweep.",
+  "status": "retired",
+  "since": "2026-10-13",
+  "ruling": "operator, 2026-10-13: archived during the darntech cycle-130 parked-endings backfill; keep nothing live"
+}
